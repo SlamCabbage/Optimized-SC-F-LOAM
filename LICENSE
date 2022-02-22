@@ -1,3 +1,19 @@
+This is the optimized implementation of the combination of the two methods described described in the following paper:
+	1.Wang H, Wang C, Chen C L, et al. F-loam: Fast lidar odometry and mapping
+	  2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 
+	2.Kim G, Kim A. Scan context: Egocentric spatial descriptor for place recognition within 3d point cloud map
+           2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+
+And this work is modified based on Advanced implementation of F-LOAM and SC-A-LOAM by 
+Wang Han 		wh200720041@gmail.com
+Giseop Kim 		paulgkim@kaist.ac.kr
+
+Author of Optimized-SC-F-LOAM
+Lizhou Liao 
+Chongqing University, Chongqing, China
+Email: liaolizhou@cqu.edu.cn
+
+
 MIT License
 
 Copyright (c) 2021 SlamCabbage

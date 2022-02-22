@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(sc_f_loam8)
+project(optimized_sc_f_loam)
 
 set(CMAKE_BUILD_TYPE "Release")
 #set(CMAKE_CXX_FLAGS "-std=c++17")
@@ -17,8 +17,8 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   tf
   eigen_conversions
-        image_transport
-        cv_bridge
+  image_transport
+  cv_bridge
 )
 
 find_package(Boost REQUIRED COMPONENTS timer)
@@ -62,26 +62,26 @@ catkin_package(
 
 
 
-add_executable(sc_floam_laser_processing_node8 src/laserProcessingNode.cpp src/laserProcessingClass.cpp src/lidar.cpp)
-target_link_libraries(sc_floam_laser_processing_node8 ${EIGEN3_LIBRARIES} ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${CERES_LIBRARIES})
+add_executable(sc_floam_laser_processing_node src/laserProcessingNode.cpp src/laserProcessingClass.cpp src/lidar.cpp)
+target_link_libraries(sc_floam_laser_processing_node ${EIGEN3_LIBRARIES} ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${CERES_LIBRARIES})
 
-add_executable(sc_floam_odom_estimation_node8 src/odomEstimationNode.cpp src/lidarOptimization.cpp src/lidar.cpp src/odomEstimationClass.cpp)
-target_link_libraries(sc_floam_odom_estimation_node8 ${EIGEN3_LIBRARIES} ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${CERES_LIBRARIES} )
+add_executable(sc_floam_odom_estimation_node src/odomEstimationNode.cpp src/lidarOptimization.cpp src/lidar.cpp src/odomEstimationClass.cpp)
+target_link_libraries(sc_floam_odom_estimation_node ${EIGEN3_LIBRARIES} ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${CERES_LIBRARIES} )
 
-add_executable(sc_floam_laser_mapping_node8 src/laserMappingNode.cpp src/laserMappingClass.cpp src/lidar.cpp)
-target_link_libraries(sc_floam_laser_mapping_node8 ${EIGEN3_LIBRARIES} ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${CERES_LIBRARIES})
+add_executable(sc_floam_laser_mapping_node src/laserMappingNode.cpp src/laserMappingClass.cpp src/lidar.cpp)
+target_link_libraries(sc_floam_laser_mapping_node ${EIGEN3_LIBRARIES} ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${CERES_LIBRARIES})
 
-add_executable(sc_floam_laserLO8
+add_executable(sc_floam_laserLO
         src/laserLoopOptimizationClass.cpp
         src/laserLoopOptimizationNode.cpp
         src/lidarOptimization.cpp
         include/scancontext/Scancontext.cpp
         src/lidar.cpp
         )
-target_compile_options(sc_floam_laserLO8
+target_compile_options(sc_floam_laserLO
         PRIVATE ${OpenMP_CXX_FLAGS}
         )
-target_link_libraries(sc_floam_laserLO8
+target_link_libraries(sc_floam_laserLO
         ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${CERES_LIBRARIES}
         ${OpenMP_CXX_FLAGS}
         gtsam

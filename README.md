@@ -1,5 +1,6 @@
 # Optimized-SC-F-LOAM
 This work combines F-LOAM with Scan-Context and optimizes it to reduce the time required to compute pose constraints between a pair of loop frames to 28% of Simple-SC-F-LOAM.(Simple-SC-F-LOAM is a way to directly combine F-LOAM with Scan-Context)
+
 contributor: Lizhou Liao, Chongqing University, Chongqing, China
 
 # 1. Mapping result
@@ -26,17 +27,20 @@ UGV equipped with a 16-beam LiDAR
 # 4. Prerequisites
 ## 4.1. Ubuntu and ROS
     Ubuntu 64-bit 20.04.
-
+    
     ROS noetic. ROS Installation: http://wiki.ros.org/noetic/Installation/Ubuntu.
 
 ## 4.2. Ceres Solver
-    Follow Ceres Installation: http://www.ceres-solver.org/installation.html.
+    Follow Ceres Installation: 
+    http://www.ceres-solver.org/installation.html.
 
 ## 4.3. PCL
-    Follow PCL Installation: https://pointclouds.org/downloads/#linux.
+    Follow PCL Installation: 
+    https://pointclouds.org/downloads/#linux.
 
 ## 4.4. GTSAM
-    Follow GTSAM Installation: https://gtsam.org/get_started/.
+    Follow GTSAM Installation: 
+    https://gtsam.org/get_started/.
 
 ## 4.4. Trajectory visualization
 For visualization purpose, this package uses hector trajectory sever, you may install the package by
@@ -46,7 +50,7 @@ For visualization purpose, this package uses hector trajectory sever, you may in
 # 5. Build
 ## 5.1. Clone repository:
     cd ~/catkin_ws/src
-    git clone https://github.com/wh200720041/floam.git
+    git clone https://github.com/SlamCabbage/Optimized-SC-F-LOAM.git
     cd ..
     catkin_make
     source ~/catkin_ws/devel/setup.bash

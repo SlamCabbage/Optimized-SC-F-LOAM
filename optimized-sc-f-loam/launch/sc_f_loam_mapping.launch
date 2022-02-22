@@ -24,16 +24,16 @@
     <param name="map_resolution" type="double" value="0.4" />
     <param name="min_dis" type="double" value="3.0" />
     <!--- -->
-    <node pkg="sc_f_loam8" type="sc_floam_odom_estimation_node8" name="sc_floam_odom_estimation_node" output="screen"/>
-    <node pkg="sc_f_loam8" type="sc_floam_laser_processing_node8" name="sc_floam_laser_processing_node" output="screen"/>
-    <node pkg="sc_f_loam8" type="sc_floam_laser_mapping_node8" name="sc_floam_laser_mapping_node" output="screen"/>
-    <node pkg="sc_f_loam8" type="sc_floam_laserLO8" name="sc_floam_laserLO" output="screen"/>
+    <node pkg="optimized_sc_f_loam" type="sc_floam_odom_estimation_node" name="sc_floam_odom_estimation_node" output="screen"/>
+    <node pkg="optimized_sc_f_loam" type="sc_floam_laser_processing_node" name="sc_floam_laser_processing_node" output="screen"/>
+    <node pkg="optimized_sc_f_loam" type="sc_floam_laser_mapping_node" name="sc_floam_laser_mapping_node" output="screen"/>
+    <node pkg="optimized_sc_f_loam" type="sc_floam_laserLO" name="sc_floam_laserLO" output="screen"/>
 
     <node pkg="tf" type="static_transform_publisher" name="word2map_tf"  args="0 0 0 0 0 0 /world /map 10" />
     
     <arg name="rviz" default="true" />
     <group if="$(arg rviz)">
-        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find sc_f_loam8)/rviz/floam_mapping.rviz" />
+        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find sc_f_loam8)/rviz/optimized_sc_floam_mapping.rviz" />
     </group>
 
     
