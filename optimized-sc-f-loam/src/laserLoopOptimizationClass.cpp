@@ -513,6 +513,7 @@ std::optional<gtsam::Pose3> laserLoopOptimizationClass::doVirtualRelative( const
     gtsam::Pose3 curr_gtPose3 = Pose6DtoGTSAMPose3(keyframePosesUpdated[_curr_kf_idx]);
     gtsam::Pose3 loop_gtPose3 = Pose6DtoGTSAMPose3(keyframePosesUpdated[_loop_kf_idx]);
     gtsam::Pose3 curr2loop = curr_gtPose3.between(loop_gtPose3);
+    int k = keyframePosesUpdated.size();
     mKF.unlock();
     double odom_distance = sqrt((curr2loop.x()) * (curr2loop.x()) + (curr2loop.y()) * (curr2loop.y()) + (curr2loop.z()) * (curr2loop.z()));
 
@@ -520,7 +521,7 @@ std::optional<gtsam::Pose3> laserLoopOptimizationClass::doVirtualRelative( const
     gtsam::Pose3 poseTo;
     Eigen::Vector3d trans = odom.translation();
 
-    if(odom_distance > 20){
+    if(odom_distance > 20 + k/40){
         correct = false;
         poseFrom = gtsam::Pose3(gtsam::Rot3::RzRyRx(0.0, 0.0, 0.0), gtsam::Point3(0.0, 0.0, 0.0));
         poseTo = gtsam::Pose3(gtsam::Rot3::RzRyRx(0.0, 0.0, 0.0), gtsam::Point3(0.0, 0.0, 0.0));
@@ -848,7 +849,7 @@ void laserLoopOptimizationClass::pubPath(ros::Publisher& pubOdomAftPGO, ros::Pub
         q.setY(odomAftPGO.pose.pose.orientation.y);
         q.setZ(odomAftPGO.pose.pose.orientation.z);
         transform.setRotation(q);
-        br.sendTransform(tf::StampedTransform(transform, odomAftPGO.header.stamp, "map", "aft_pgo_odom"));
+        // br.sendTransform(tf::StampedTransform(transform, odomAftPGO.header.stamp, "map", "aft_pgo_odom"));
     }
 }
 

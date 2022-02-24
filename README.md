@@ -12,8 +12,6 @@ contributor: Lizhou Liao, Chongqing University, Chongqing, China
 UGV equipped with a 16-beam LiDAR
 # 3. Evaluation
 
-All tests were done based on the Robot Operating System (ROS) that was installed on a laptop with an AMD R5-5600H processor, a 16 GB RAM, and the Ubuntu platform.
-
 ## 3.1. Results on KITTI Sequence 00 and Sequence 05
 ![image](https://user-images.githubusercontent.com/95751923/155125294-980e6a3d-6e76-4a23-9771-493ba278677e.png)
 
@@ -57,11 +55,22 @@ For visualization purpose, this package uses hector trajectory sever, you may in
     catkin_make
     source ~/catkin_ws/devel/setup.bash
 
-## 5.2. Launch ROS
-    roslaunch optimized_sc_f_loam sc_f_loam_mapping.launch
+## 5.2. Create message file:
+
+In this folder, Ground Truth information, optimized pose information, F-LOAM pose information and time information are stored：
+
+```
+mkdir ~/message
+```
+
+## 5.3. Launch ROS
+
+    roslaunch optimized_sc_f_loam optimized_sc_f_loam_mapping.launch
 
 # 6. Test on KITTI sequence
 You can download the sequence 00 and 05 datasets from the KITTI official website and convert them into bag files using the kitti2bag open source method.
+
+See the link: https://github.com/ethz-asl/kitti_to_rosbag
 
 
 # 7. Acknowledgements

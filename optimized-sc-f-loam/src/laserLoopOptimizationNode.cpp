@@ -365,6 +365,8 @@ void process_viz_map()
         downSizeFilterMapPGO.setInputCloud(laserCloudMapPGO);
         downSizeFilterMapPGO.filter(*laserCloudMapPGO);
 
+	pcl::io::savePCDFileBinary(laserLoopOptimization.pgScansDirectory + "map.pcd", *laserCloudMapPGO);
+
         sensor_msgs::PointCloud2 laserCloudMapPGOMsg;
         pcl::toROSMsg(*laserCloudMapPGO, laserCloudMapPGOMsg);
         laserCloudMapPGOMsg.header.frame_id = "map";
