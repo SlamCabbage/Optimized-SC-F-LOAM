@@ -1,3 +1,9 @@
+**This method is different from the method of directly combining scan context and f-loam in the following three points:**
+**1. The method uses an adaptive threshold to further judge the loopback detection results, reducing false loopback detections;**
+**2. This method uses feature point-based matching to calculate the constraints between a pair of loopback frame point clouds, so that this method only needs 69% of the time consumption of SC-A-LOAM in the process of constructing loopback frame constraints.**
+
+**<u> Note: This method has been submitted to IEEE Robotics and automation letters && IROS. Therefore, you cannot use this method as an innovation point of your thesis. </u>**
+
 # Optimized-SC-F-LOAM
 This work combines F-LOAM with Scan-Context and optimizes it to reduce the time required to compute pose constraints between a pair of loop frames to 28% of Simple-SC-F-LOAM.(Simple-SC-F-LOAM is a way to directly combine F-LOAM with Scan-Context)
 
