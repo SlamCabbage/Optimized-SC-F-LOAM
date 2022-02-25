@@ -18,6 +18,8 @@ contributor: Lizhou Liao, Chongqing University, Chongqing, China
 UGV equipped with a 16-beam LiDAR
 # 3. Evaluation
 
+All tests were done based on the Robot Operating System (ROS) that was installed on a laptop with an AMD R5-5600H processor, a 16 GB RAM and the Ubuntu platform.
+
 ## 3.1. Results on KITTI Sequence 00 and Sequence 05
 ![image](https://user-images.githubusercontent.com/95751923/155125294-980e6a3d-6e76-4a23-9771-493ba278677e.png)
 
