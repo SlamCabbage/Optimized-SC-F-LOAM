@@ -1,6 +1,6 @@
 **This method is different from the method of directly combining scan context and f-loam in the following two points:**
 **1. The method uses an adaptive threshold to further judge the loop closure detection results, reducing false loop closure detections;**
-**2. This method uses feature point-based matching to calculate the constraints between a pair of loop closure frame point clouds, so that this method only needs 30% of the time consumption of SC-A-LOAM in the process of constructing loopback frame constraints.**
+**2. This method uses feature point-based matching to calculate the constraints between a pair of loop closure frame point clouds, so that this method only needs 30% of the time consumption of SC-A-LOAM in the process of constructing loop frame constraints.**
 
 **<u> Note: This method has been submitted to IEEE Robotics and automation letters && IROS. Therefore, you cannot use this method as an innovation point of your paper. </u>**
 
