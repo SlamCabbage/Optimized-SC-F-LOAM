@@ -78,9 +78,8 @@ mkdir ~/message
 # 6. Test on KITTI sequence
 You can download the sequence 00 and 05 datasets from the KITTI official website and convert them into bag files using the kitti2bag open source method.
 
-Nr.     Sequence name     Start   End
----------------------------------------
 00: 2011_10_03_drive_0027 000000 004540
+
 05: 2011_09_30_drive_0018 000000 002760
 
 See the link: https://github.com/ethz-asl/kitti_to_rosbag
