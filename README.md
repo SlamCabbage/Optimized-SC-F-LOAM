@@ -2,6 +2,7 @@
 **1. The method uses an adaptive threshold to further judge the loop closure detection results, reducing false loop closure detections;**
 **2. This method uses feature point-based matching to calculate the constraints between a pair of loop closure frame point clouds, so that this method only needs 30% of the time consumption of SC-A-LOAM in the process of constructing loop frame constraints.**
 
+**The paper has been submitted to IROS.**
 
 # Optimized-SC-F-LOAM
 This work combines F-LOAM with Scan-Context and optimizes it to reduce the time required to compute pose constraints between a pair of loop closure point clouds to 28% of Simple-SC-F-LOAM.(Simple-SC-F-LOAM is a way to directly combine F-LOAM with Scan-Context)
@@ -67,8 +68,9 @@ For visualization purpose, this package uses hector trajectory sever, you may in
 In this folder, Ground Truth information, optimized pose information, F-LOAM pose information and time information are stored：
 
 ```
-mkdir ~/message
+mkdir -p ~/message/Scans
 ```
+Change line 383 in the laserLoopOptimizationNode.cpp to your own "messgae" folder path
 
 ## 5.3. Launch ROS
 
