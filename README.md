@@ -93,8 +93,21 @@ Thanks for SC-A-LOAM(Scan context: Egocentric spatial descriptor for place recog
 
 # 8. citation
 
-@inproceedings{Liao2022OptimizedSO,
-  title={Optimized SC-F-LOAM: Optimized Fast LiDAR Odometry and Mapping Using Scan Context},
-  author={Lizhou Liao and Chunyun Fu and Binbin Feng and Tian Su},
-  year={2022}
+@misc{https://doi.org/10.48550/arxiv.2204.04932,
+  doi = {10.48550/ARXIV.2204.04932},
+  
+  url = {https://arxiv.org/abs/2204.04932},
+  
+  author = {Liao, Lizhou and Fu, Chunyun and Feng, Binbin and Su, Tian},
+  
+  keywords = {Robotics (cs.RO), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Optimized SC-F-LOAM: Optimized Fast LiDAR Odometry and Mapping Using Scan Context},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
 }
+
