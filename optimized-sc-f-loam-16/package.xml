@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package>
+  <name>optimized_sc_f_loam_16</name>
+  <version>0.0.0</version>
+
+  <description>
+    This work is created based on some optimization on FLOAM by NYTU, LOAM by CMU and Scan Context by KAIST
+  </description>
+
+  <maintainer email="liaolizhou@cqu.edu.cn">Liao Lizhou</maintainer>
+
+  <license>BSD</license>
+  <author email="liaolizhou@cqu.edu.cn">Liao Lizhou</author>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>  
+  <build_depend>rosbag</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>eigen_conversions</build_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>rosbag</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>eigen_conversions</run_depend>
+
+  <export>
+  </export>
+</package>
