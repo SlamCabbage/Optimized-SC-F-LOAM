@@ -92,7 +92,7 @@ See the link: https://github.com/ethz-asl/kitti_to_rosbag
 Thanks for SC-A-LOAM(Scan context: Egocentric spatial descriptor for place recognition within 3d point cloud map) and F-LOAM(F-LOAM : Fast LiDAR Odometry and Mapping).
 
 # 8. citation
-
+```
 @misc{https://doi.org/10.48550/arxiv.2204.04932,
   doi = {10.48550/ARXIV.2204.04932},
   
@@ -110,4 +110,5 @@ Thanks for SC-A-LOAM(Scan context: Egocentric spatial descriptor for place recog
   
   copyright = {arXiv.org perpetual, non-exclusive license}
 }
+```
 
