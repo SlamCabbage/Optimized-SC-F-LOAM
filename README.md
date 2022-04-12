@@ -4,6 +4,8 @@
 
 **The paper has been submitted to IROS.**
 
+**You can find the preprint on Arxiv: https://arxiv.org/abs/2204.04932.**
+
 # Optimized-SC-F-LOAM
 This work combines F-LOAM with Scan-Context and optimizes it to reduce the time required to compute pose constraints between a pair of loop closure point clouds to 28% of Simple-SC-F-LOAM.(Simple-SC-F-LOAM is a way to directly combine F-LOAM with Scan-Context)
 
