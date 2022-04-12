@@ -93,4 +93,8 @@ Thanks for SC-A-LOAM(Scan context: Egocentric spatial descriptor for place recog
 
 # 8. citation
 
-waiting
+@inproceedings{Liao2022OptimizedSO,
+  title={Optimized SC-F-LOAM: Optimized Fast LiDAR Odometry and Mapping Using Scan Context},
+  author={Lizhou Liao and Chunyun Fu and Binbin Feng and Tian Su},
+  year={2022}
+}
