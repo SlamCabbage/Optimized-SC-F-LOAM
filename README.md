@@ -2,8 +2,6 @@
 **1. The method uses an adaptive threshold to further judge the loop closure detection results, reducing false loop closure detections;**
 **2. This method uses feature point-based matching to calculate the constraints between a pair of loop closure frame point clouds, so that this method only needs 30% of the time consumption of SC-A-LOAM in the process of constructing loop frame constraints.**
 
-**The paper has been submitted to IROS.**
-
 **You can find the preprint on Arxiv: https://arxiv.org/abs/2204.04932.**
 
 # Optimized-SC-F-LOAM
